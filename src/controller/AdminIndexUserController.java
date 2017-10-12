@@ -34,7 +34,7 @@ public class AdminIndexUserController extends HttpServlet {
  			return;
  		}
          
-         UserDAO objDAO = new UserDAO();
+         /*UserDAO objDAO = new UserDAO();
          
          int row_count = define.ROW_COUNT;
  		 int current_page = 1;		
@@ -63,7 +63,7 @@ public class AdminIndexUserController extends HttpServlet {
          
          RequestDispatcher rd = request.getRequestDispatcher("/admin/indexUser.jsp");
          rd.forward(request, response);
-
+*/
 		
 	}
 

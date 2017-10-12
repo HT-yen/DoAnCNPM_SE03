@@ -22,7 +22,7 @@ public class UserDAO {
 		  connectMySQLLibrary = new ConnectMySQLLibrary();
 	}
 	
-	public ArrayList<User> getItems(){
+/*	public ArrayList<User> getItems(){
 		ArrayList<User> listUser = new ArrayList<>();
 		conn = connectMySQLLibrary.getConnectMySQL();
 		
@@ -339,6 +339,10 @@ public class UserDAO {
 		
 		return false;
 	}
+	
+	*/
+	
+	
 	
 	
 	

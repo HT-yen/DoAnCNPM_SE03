@@ -1,97 +1,184 @@
 package model.bean;
 
 public class User {
-	private int idUser;
-	private String username;
-	private String password;
-	private String fullname;
-	private String email;
-	private int active;
 	
+	private String idUser;
+	private String tenUser;
+	private String chucDanhKhoaHoc;
+	private String diaChiCoQuan;
+	private String dienThoaiCoQuan;
+	private String hocVi;
+	private String namSinh;
+	private String diaChiNhaRieng;
+	private int dienThoaiNhaRieng;
+	private String email;
+	private String fax;
+	private String taiKhoan;
+	private String matKhau;
+	private String idLoaiTaiKhoan;
+	private String idKhoa;
 	
 	public User() {
 		super();
 	}
 
-
-	public User(int idUser, String username, String password, String fullname,
-			String email, int active) {
+	public User(String idUser, String tenUser, String chucDanhKhoaHoc,
+			String diaChiCoQuan, String dienThoaiCoQuan, String hocVi,
+			String namSinh, String diaChiNhaRieng, int dienThoaiNhaRieng,
+			String email, String fax, String taiKhoan, String matKhau,
+			String idLoaiTaiKhoan, String idKhoa) {
 		super();
 		this.idUser = idUser;
-		this.username = username;
-		this.password = password;
-		this.fullname = fullname;
+		this.tenUser = tenUser;
+		this.chucDanhKhoaHoc = chucDanhKhoaHoc;
+		this.diaChiCoQuan = diaChiCoQuan;
+		this.dienThoaiCoQuan = dienThoaiCoQuan;
+		this.hocVi = hocVi;
+		this.namSinh = namSinh;
+		this.diaChiNhaRieng = diaChiNhaRieng;
+		this.dienThoaiNhaRieng = dienThoaiNhaRieng;
 		this.email = email;
-		this.active = active;
+		this.fax = fax;
+		this.taiKhoan = taiKhoan;
+		this.matKhau = matKhau;
+		this.idLoaiTaiKhoan = idLoaiTaiKhoan;
+		this.idKhoa = idKhoa;
 	}
 
-
-	public int getIdUser() {
+	public String getIdUser() {
 		return idUser;
 	}
 
-
-	public void setIdUser(int idUser) {
+	public void setIdUser(String idUser) {
 		this.idUser = idUser;
 	}
 
-
-	public String getUsername() {
-		return username;
+	public String getTenUser() {
+		return tenUser;
 	}
 
-
-	public void setUsername(String username) {
-		this.username = username;
+	public void setTenUser(String tenUser) {
+		this.tenUser = tenUser;
 	}
 
-
-	public String getPassword() {
-		return password;
+	public String getChucDanhKhoaHoc() {
+		return chucDanhKhoaHoc;
 	}
 
-
-	public void setPassword(String password) {
-		this.password = password;
+	public void setChucDanhKhoaHoc(String chucDanhKhoaHoc) {
+		this.chucDanhKhoaHoc = chucDanhKhoaHoc;
 	}
 
-
-	public String getFullname() {
-		return fullname;
+	public String getDiaChiCoQuan() {
+		return diaChiCoQuan;
 	}
 
-
-	public void setFullname(String fullname) {
-		this.fullname = fullname;
+	public void setDiaChiCoQuan(String diaChiCoQuan) {
+		this.diaChiCoQuan = diaChiCoQuan;
 	}
 
+	public String getDienThoaiCoQuan() {
+		return dienThoaiCoQuan;
+	}
+
+	public void setDienThoaiCoQuan(String dienThoaiCoQuan) {
+		this.dienThoaiCoQuan = dienThoaiCoQuan;
+	}
+
+	public String getHocVi() {
+		return hocVi;
+	}
+
+	public void setHocVi(String hocVi) {
+		this.hocVi = hocVi;
+	}
+
+	public String getNamSinh() {
+		return namSinh;
+	}
+
+	public void setNamSinh(String namSinh) {
+		this.namSinh = namSinh;
+	}
+
+	public String getDiaChiNhaRieng() {
+		return diaChiNhaRieng;
+	}
+
+	public void setDiaChiNhaRieng(String diaChiNhaRieng) {
+		this.diaChiNhaRieng = diaChiNhaRieng;
+	}
+
+	public int getDienThoaiNhaRieng() {
+		return dienThoaiNhaRieng;
+	}
+
+	public void setDienThoaiNhaRieng(int dienThoaiNhaRieng) {
+		this.dienThoaiNhaRieng = dienThoaiNhaRieng;
+	}
 
 	public String getEmail() {
 		return email;
 	}
 
-
 	public void setEmail(String email) {
 		this.email = email;
 	}
 
-
-	public int getActive() {
-		return active;
+	public String getFax() {
+		return fax;
 	}
 
-
-	public void setActive(int active) {
-		this.active = active;
+	public void setFax(String fax) {
+		this.fax = fax;
 	}
 
+	public String getTaiKhoan() {
+		return taiKhoan;
+	}
+
+	public void setTaiKhoan(String taiKhoan) {
+		this.taiKhoan = taiKhoan;
+	}
+
+	public String getMatKhau() {
+		return matKhau;
+	}
+
+	public void setMatKhau(String matKhau) {
+		this.matKhau = matKhau;
+	}
+
+	public String getIdLoaiTaiKhoan() {
+		return idLoaiTaiKhoan;
+	}
+
+	public void setIdLoaiTaiKhoan(String idLoaiTaiKhoan) {
+		this.idLoaiTaiKhoan = idLoaiTaiKhoan;
+	}
+
+	public String getIdKhoa() {
+		return idKhoa;
+	}
+
+	public void setIdKhoa(String idKhoa) {
+		this.idKhoa = idKhoa;
+	}
 
 	@Override
 	public String toString() {
-		return "User [idUser=" + idUser + ", username=" + username
-				+ ", password=" + password + ", fullname=" + fullname
-				+ ", email=" + email + ", active=" + active + "]";
+		return "User [idUser=" + idUser + ", tenUser=" + tenUser
+				+ ", chucDanhKhoaHoc=" + chucDanhKhoaHoc + ", diaChiCoQuan="
+				+ diaChiCoQuan + ", dienThoaiCoQuan=" + dienThoaiCoQuan
+				+ ", hocVi=" + hocVi + ", namSinh=" + namSinh
+				+ ", diaChiNhaRieng=" + diaChiNhaRieng + ", dienThoaiNhaRieng="
+				+ dienThoaiNhaRieng + ", email=" + email + ", fax=" + fax
+				+ ", taiKhoan=" + taiKhoan + ", matKhau=" + matKhau
+				+ ", idLoaiTaiKhoan=" + idLoaiTaiKhoan + ", idKhoa=" + idKhoa
+				+ "]";
 	}
+
+	
 	
 	
 	

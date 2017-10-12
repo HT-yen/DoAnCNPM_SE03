@@ -40,7 +40,7 @@ public class AdminAddUserController extends HttpServlet {
 	    response.setCharacterEncoding("UTF-8");
 	    response.setContentType("text/html");
 	    
-	    StringLibrary st = new StringLibrary();//tao doi tuong lop ma hóa
+	    /*StringLibrary st = new StringLibrary();//tao doi tuong lop ma hóa
 	    
 	    UserDAO objDAO = new UserDAO();
 	    
@@ -75,7 +75,7 @@ public class AdminAddUserController extends HttpServlet {
 			}
 			
 		}
-		
+		*/
 		
 		
 		
