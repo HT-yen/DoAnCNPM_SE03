@@ -35,7 +35,7 @@ public class AdminShowEditUserController extends HttpServlet {
 				}
 		
 		
-		UserDAO objDAO = new UserDAO();
+		/*UserDAO objDAO = new UserDAO();
 		int idUser = Integer.parseInt(request.getParameter("uid"));//idUser tren url
 		//==============================
 		//phân quyền 
@@ -54,6 +54,9 @@ public class AdminShowEditUserController extends HttpServlet {
 	    	response.sendRedirect(request.getContextPath()+"/admin/indexUser?msg=5");
 	    	return;
 	    } 
+	    */
+	    
+	    
 	}
 
 }
