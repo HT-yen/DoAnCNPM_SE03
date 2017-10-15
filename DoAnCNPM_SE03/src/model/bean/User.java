@@ -7,7 +7,8 @@ public class User {
 	private String chucDanhKhoaHoc;
 	private String diaChiCoQuan;
 	private String dienThoaiCoQuan;
-	private String hocVi;
+	private int idHocVi;
+	private String tenHocVi;
 	private String namSinh;
 	private String diaChiNhaRieng;
 	private String dienThoaiNhaRieng;
@@ -25,18 +26,19 @@ public class User {
 	}
 
 	public User(int idUser, String fullName, String chucDanhKhoaHoc,
-			String diaChiCoQuan, String dienThoaiCoQuan, String hocVi,
-			String namSinh, String diaChiNhaRieng, String dienThoaiNhaRieng,
-			String email, String fax, String userName, String matKhau,
-			int idLoaiTaiKhoan, String tenLoaiTaiKhoan, int idKhoa,
-			String tenKhoa) {
+			String diaChiCoQuan, String dienThoaiCoQuan, int idHocVi,
+			String tenHocVi, String namSinh, String diaChiNhaRieng,
+			String dienThoaiNhaRieng, String email, String fax,
+			String userName, String matKhau, int idLoaiTaiKhoan,
+			String tenLoaiTaiKhoan, int idKhoa, String tenKhoa) {
 		super();
 		this.idUser = idUser;
 		this.fullName = fullName;
 		this.chucDanhKhoaHoc = chucDanhKhoaHoc;
 		this.diaChiCoQuan = diaChiCoQuan;
 		this.dienThoaiCoQuan = dienThoaiCoQuan;
-		this.hocVi = hocVi;
+		this.idHocVi = idHocVi;
+		this.tenHocVi = tenHocVi;
 		this.namSinh = namSinh;
 		this.diaChiNhaRieng = diaChiNhaRieng;
 		this.dienThoaiNhaRieng = dienThoaiNhaRieng;
@@ -90,12 +92,20 @@ public class User {
 		this.dienThoaiCoQuan = dienThoaiCoQuan;
 	}
 
-	public String getHocVi() {
-		return hocVi;
+	public int getIdHocVi() {
+		return idHocVi;
 	}
 
-	public void setHocVi(String hocVi) {
-		this.hocVi = hocVi;
+	public void setIdHocVi(int idHocVi) {
+		this.idHocVi = idHocVi;
+	}
+
+	public String getTenHocVi() {
+		return tenHocVi;
+	}
+
+	public void setTenHocVi(String tenHocVi) {
+		this.tenHocVi = tenHocVi;
 	}
 
 	public String getNamSinh() {
@@ -191,15 +201,16 @@ public class User {
 		return "User [idUser=" + idUser + ", fullName=" + fullName
 				+ ", chucDanhKhoaHoc=" + chucDanhKhoaHoc + ", diaChiCoQuan="
 				+ diaChiCoQuan + ", dienThoaiCoQuan=" + dienThoaiCoQuan
-				+ ", hocVi=" + hocVi + ", namSinh=" + namSinh
-				+ ", diaChiNhaRieng=" + diaChiNhaRieng + ", dienThoaiNhaRieng="
-				+ dienThoaiNhaRieng + ", email=" + email + ", fax=" + fax
-				+ ", userName=" + userName + ", matKhau=" + matKhau
-				+ ", idLoaiTaiKhoan=" + idLoaiTaiKhoan + ", tenLoaiTaiKhoan="
-				+ tenLoaiTaiKhoan + ", idKhoa=" + idKhoa + ", tenKhoa="
-				+ tenKhoa + "]";
+				+ ", idHocVi=" + idHocVi + ", tenHocVi=" + tenHocVi
+				+ ", namSinh=" + namSinh + ", diaChiNhaRieng=" + diaChiNhaRieng
+				+ ", dienThoaiNhaRieng=" + dienThoaiNhaRieng + ", email="
+				+ email + ", fax=" + fax + ", userName=" + userName
+				+ ", matKhau=" + matKhau + ", idLoaiTaiKhoan=" + idLoaiTaiKhoan
+				+ ", tenLoaiTaiKhoan=" + tenLoaiTaiKhoan + ", idKhoa=" + idKhoa
+				+ ", tenKhoa=" + tenKhoa + "]";
 	}
 
+	
 	
 	
 

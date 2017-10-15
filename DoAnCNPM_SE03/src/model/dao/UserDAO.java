@@ -8,6 +8,8 @@ import java.sql.Statement;
 import java.util.ArrayList;
 
 import library.ConnectMySQLLibrary;
+import model.bean.HocVi;
+import model.bean.LoaiTaiKhoan;
 import model.bean.User;
 import constant.define;
 
@@ -27,9 +29,10 @@ public User checkLoginPublic(String username, String password) {
 		
         conn = connectMySQLLibrary.getConnectMySQL();
         
-        String sql = "select u.*, k.tenKhoa, ltk.tenLoaiTaiKhoan from user AS u "
+        String sql = "select u.*, k.tenKhoa, ltk.tenLoaiTaiKhoan, hv.tenHocVi from user AS u "
         		+ " INNER JOIN loaitaikhoan AS ltk ON ltk.idLoaiTaiKhoan = u.idLoaiTaiKhoan  "
         		+ " INNER JOIN  khoa AS k ON k.idKhoa = u.idKhoa "
+        		+ " INNER JOIN  hocvi AS hv ON hv.idHocVi = u.idHocVi "
         		+ " where userName = ? and matKhau = ? ";
         
         User objUser = null;
@@ -42,7 +45,7 @@ public User checkLoginPublic(String username, String password) {
 			rs = pst.executeQuery();
 			if(rs.next()){
 			  objUser = new User(rs.getInt("idUser"),rs.getString("fullName"),rs.getString("chucDanhKhoaHoc") ,rs.getString("diaChiCoQuan") ,
-					             rs.getString("dienThoaiCoQuan") ,rs.getString("hocVi"),rs.getString("namSinh") ,rs.getString("diaChiNhaRieng") , 
+					             rs.getString("dienThoaiCoQuan"),rs.getInt("idHocVi") ,rs.getString("tenHocVi"),rs.getString("namSinh") ,rs.getString("diaChiNhaRieng") , 
 					             rs.getString("dienThoaiNhaRieng") ,rs.getString("email") ,rs.getString("fax"),rs.getString("userName") , 
 					             rs.getString("matKhau") ,rs.getInt("idLoaiTaiKhoan"),rs.getString("tenLoaiTaiKhoan") ,rs.getInt("idKhoa"), rs.getString("tenKhoa") );
 			}
@@ -61,6 +64,66 @@ public User checkLoginPublic(String username, String password) {
 		
 		return objUser;
 	}
+
+    //lay ra danh sách loai tai khoan ko phan trang (public)
+	public ArrayList<LoaiTaiKhoan> getListLoaiTK(){
+		ArrayList<LoaiTaiKhoan> listLoaiTK = new ArrayList<>();
+		conn = connectMySQLLibrary.getConnectMySQL();
+		
+		String sql = "select * FROM loaitaikhoan ORDER BY idLoaiTaiKhoan ASC";
+		
+		try {
+			st = conn.createStatement();
+			rs = st.executeQuery(sql);
+			
+			while(rs.next()){
+			   LoaiTaiKhoan objLoaiTK = new LoaiTaiKhoan(rs.getInt("idLoaiTaiKhoan") ,rs.getString("tenLoaiTaiKhoan") );
+			   listLoaiTK.add(objLoaiTK);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}finally{
+			try {
+				st.close();
+				conn.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		return listLoaiTK;
+		
+	}
+	
+	//lay ra danh sách hoc vi ko phan trang (public)
+		public ArrayList<HocVi> getListHocVi(){
+			ArrayList<HocVi> listHocVi = new ArrayList<>();
+			conn = connectMySQLLibrary.getConnectMySQL();
+			
+			String sql = "select * FROM hocvi ORDER BY idHocVi ASC";
+			
+			try {
+				st = conn.createStatement();
+				rs = st.executeQuery(sql);
+				
+				while(rs.next()){
+				   HocVi objHocVi = new HocVi(rs.getInt("idHocVi") ,rs.getString("tenHocVi") );
+				   listHocVi.add(objHocVi);
+				}
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}finally{
+				try {
+					st.close();
+					conn.close();
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
+			}
+			return listHocVi;
+			
+		}
+
+
 	
 /*	public ArrayList<User> getItems(){
 		ArrayList<User> listUser = new ArrayList<>();

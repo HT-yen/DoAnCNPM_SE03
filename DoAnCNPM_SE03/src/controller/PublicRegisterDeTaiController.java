@@ -8,21 +8,21 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class PublicShowRegisterDeTaiController extends HttpServlet {
+public class PublicRegisterDeTaiController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-    public PublicShowRegisterDeTaiController() {
+    public PublicRegisterDeTaiController() {
         super();
     }
     
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-       doPost(request, response);
+		 RequestDispatcher rd = request.getRequestDispatcher("/register_detai.jsp");
+         rd.forward(request, response);
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
          
-         RequestDispatcher rd = request.getRequestDispatcher("/register_detai.jsp");
-         rd.forward(request, response);
+        
 	}
 
 }

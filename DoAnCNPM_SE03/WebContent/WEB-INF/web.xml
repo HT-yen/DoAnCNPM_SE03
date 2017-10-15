@@ -183,12 +183,12 @@
   </servlet-mapping>
   
   <servlet>
-    <servlet-name>PublicShowAddMemberController</servlet-name>
-    <servlet-class>controller.PublicShowAddMemberController</servlet-class>
+    <servlet-name>PublicAddMemberController</servlet-name>
+    <servlet-class>controller.PublicAddMemberController</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>PublicShowAddMemberController</servlet-name>
-    <url-pattern>/show-add-member</url-pattern>
+    <servlet-name>PublicAddMemberController</servlet-name>
+    <url-pattern>/add-member</url-pattern>
   </servlet-mapping>
   
   
@@ -213,12 +213,12 @@
   
   
   <servlet>
-    <servlet-name>PublicShowEditMemberController</servlet-name>
-    <servlet-class>controller.PublicShowEditMemberController</servlet-class>
+    <servlet-name>PublicEditMemberController</servlet-name>
+    <servlet-class>controller.PublicEditMemberController</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>PublicShowEditMemberController</servlet-name>
-    <url-pattern>/show-edit-member</url-pattern>
+    <servlet-name>PublicEditMemberController</servlet-name>
+    <url-pattern>/edit-member</url-pattern>
   </servlet-mapping>
   
   
@@ -233,11 +233,11 @@
   
   
   <servlet>
-    <servlet-name>PublicShowLienHeController</servlet-name>
-    <servlet-class>controller.PublicShowLienHeController</servlet-class>
+    <servlet-name>PublicLienHeController</servlet-name>
+    <servlet-class>controller.PublicLienHeController</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>PublicShowLienHeController</servlet-name>
+    <servlet-name>PublicLienHeController</servlet-name>
     <url-pattern>/lien-he</url-pattern>
   </servlet-mapping>
   
@@ -280,11 +280,11 @@
   
   
    <servlet>
-    <servlet-name>PublicShowRegisterDeTaiController</servlet-name>
-    <servlet-class>controller.PublicShowRegisterDeTaiController</servlet-class>
+    <servlet-name>PublicRegisterDeTaiController</servlet-name>
+    <servlet-class>controller.PublicRegisterDeTaiController</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>PublicShowRegisterDeTaiController</servlet-name>
+    <servlet-name>PublicRegisterDeTaiController</servlet-name>
     <url-pattern>/register-detai</url-pattern>
   </servlet-mapping>
   
@@ -299,20 +299,20 @@
   </servlet-mapping>
   
   <servlet>
-    <servlet-name>PublicShowUpdateInfoPersonController</servlet-name>
-    <servlet-class>controller.PublicShowUpdateInfoPersonController</servlet-class>
+    <servlet-name>PublicUpdateInfoPersonController</servlet-name>
+    <servlet-class>controller.PublicUpdateInfoPersonController</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>PublicShowUpdateInfoPersonController</servlet-name>
+    <servlet-name>PublicUpdateInfoPersonController</servlet-name>
     <url-pattern>/update-infor-person</url-pattern>
   </servlet-mapping>
   
    <servlet>
-    <servlet-name>PublicShowUpdateDetaiController</servlet-name>
-    <servlet-class>controller.PublicShowUpdateDetaiController</servlet-class>
+    <servlet-name>PublicUpdateDetaiController</servlet-name>
+    <servlet-class>controller.PublicUpdateDetaiController</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>PublicShowUpdateDetaiController</servlet-name>
+    <servlet-name>PublicUpdateDetaiController</servlet-name>
     <url-pattern>/update-detai</url-pattern>
   </servlet-mapping>
   

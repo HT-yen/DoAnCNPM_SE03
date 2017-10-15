@@ -8,21 +8,21 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class PublicShowEditMemberController extends HttpServlet {
+public class PublicEditMemberController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-    public PublicShowEditMemberController() {
+    public PublicEditMemberController() {
         super();
     }
     
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-       doPost(request, response);
+		 RequestDispatcher rd = request.getRequestDispatcher("/edit_member.jsp");
+         rd.forward(request, response);
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
          
-         RequestDispatcher rd = request.getRequestDispatcher("/edit_member.jsp");
-         rd.forward(request, response);
+        
 	}
 
 }

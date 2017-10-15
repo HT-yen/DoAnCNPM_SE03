@@ -96,7 +96,7 @@
 						<td width="4%;">4</td> <td width="25%;" style="font-weight:bold;">Điện thoại cơ quan</td>  <td> <%=objUser.getDienThoaiCoQuan() %> </td>
 					</tr>
 					<tr>
-						<td width="4%;">5</td> <td width="25%;" style="font-weight:bold;">Học vị</td>  <td> <%=objUser.getHocVi() %> </td>
+						<td width="4%;">5</td> <td width="25%;" style="font-weight:bold;">Học vị</td>  <td> <%=objUser.getTenHocVi() %> </td>
 					</tr>
 					<tr>
 						<td width="4%;">6</td> <td width="25%;" style="font-weight:bold;">Năm sinh</td>  <td> <%=objUser.getNamSinh() %> </td>
