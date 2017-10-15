@@ -110,7 +110,7 @@
                                 <a href="edit.html" class="addtop"><img src="../assets/img/add.png" alt="" /> Thêm</a>
                             </div>
                             <div class="content table-responsive table-full-width">
-                                <table class="table table-striped">
+                                <table class="table table-striped" id="table-contain">
                                     <thead>
                                         <th>ID</th>
                                     	<th>Họ tên</th>
