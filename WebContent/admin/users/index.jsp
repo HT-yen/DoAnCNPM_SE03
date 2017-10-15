@@ -1,4 +1,7 @@
-
+<%@page import="model.bean.User"%>
+<%@page import="model.bean.LoaiTaiKhoan"%>
+<%@page import="model.dao.UserDAO"%>
+<%@page import="model.dao.LoaiTaiKhoanDAO"%>
 <%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
@@ -83,9 +86,13 @@
                                                 <div class="form-group">
                                                     <select name="friend_list" class="form-control border-input">
                                                     	<option value="0">-- Tất cả loại tài khoản--</option>
-                                                    	<option value="1">Giảng viên</option>
-                                                    	<option>Chủ nhiệm khoa</option>
-                                                    	<option>Nhân viên quản lý NCKH cấp trường </option>
+                                                    	<% 
+					                                    	LoaiTaiKhoanDAO loaiTaiKhoanDao = new LoaiTaiKhoanDAO();
+					                                    	ArrayList<LoaiTaiKhoan> listLoaiTaiKhoan = loaiTaiKhoanDao.getItems();
+					                                    	for(int i = 0; i < listLoaiTaiKhoan.size(); i++) {
+					                                    %>
+                                                    	<option value="<%= listLoaiTaiKhoan.get(i).getid_LoaiTaiKhoan() %>"><%= listLoaiTaiKhoan.get(i).getTenLoaiTaiKhoan() %></option>
+                                                    	<%} %>
                                                     </select>
                                                 </div>
                                             </div>
@@ -114,35 +121,27 @@
                                     	<th>Chức năng</th>
                                     </thead>
                                     <tbody>
+                                    <% 
+                                    	UserDAO userDao = new UserDAO();
+                                    	ArrayList<User> listUsers = userDao.getItemsByPage(0);
+                                    	for(int i = 0; i < listUsers.size(); i++) {
+                                    %>
                                         <tr>
-                                        	<td>1</td>
-                                        	<td><a href="edit.html">Trần Văn Nam</a></td>
-                                        	<td>Chủ nhiệm</td>
-                                        	<td>tranvannam@gmail.com</td>
-                                        	<td>0977 654 555</td>
-                                            <td>Giảng viên</td>
+                                        	<td><%= listUsers.get(i).getIdUser() %></td>
+                                        	<td><a href="edit.html"><%= listUsers.get(i).getTenUser() %></a></td>
+                                        	<td><%= listUsers.get(i).getChucDanhKhoaHoc() %></td>
+                                        	<td><%= listUsers.get(i).getEmail() %></td>
+                                        	<td><%=listUsers.get(i).getDienThoaiNhaRieng() %></td>
+                                            <td><%=loaiTaiKhoanDao.getItem(listUsers.get(i).getIdLoaiTaiKhoan()).getTenLoaiTaiKhoan() %></td>
                                         	<td>
                                                 <a href="edit.html"><img src="<%=request.getContextPath() %>/templates/admin/img/edit.gif" alt="" /> Sửa</a> &nbsp;||&nbsp;
                                                 <form style="display: inline">
-                                                    <a href="" class="link-xoa"><img src="<%=request.getContextPath() %>/templates/admin/img/del.gif" alt="" /> Xóa</a>
+                                                    <a href="" class="link-xoa"><img src="<%= request.getContextPath() %>/templates/admin/img/del.gif" alt="" /> Xóa</a>
                                                 </form>
                                             </td>
                                         </tr>
-                                         <tr>
-                                            <td>1</td>
-                                            <td><a href="edit.html">Trần Văn Nam</a></td>
-                                            <td>Chủ nhiệm</td>
-                                            <td>tranvannam@gmail.com</td>
-                                            <td>0977 654 555</td>
-                                            <td>Giảng viên</td>
-                                            <td>
-                                                <a href="edit.html"><img src="<%=request.getContextPath() %>/templates/admin/img/edit.gif" alt="" /> Sửa</a> &nbsp;||&nbsp;
-                                                <form style="display: inline">
-                                                    <a href="" class="link-xoa"><img src="<%=request.getContextPath() %>/templates/admin/img/del.gif" alt="" /> Xóa</a>
-                                                </form>
-                                            </td>
-                                        </tr>
-                                        <tr class="text-center text-danger mt-20">
+                    			<% } %>
+                                        <tr class="text-center text-danger mt-20 no-result-search" hidden>
                                              <td colspan="7"><h5>Không tìm thấy kết quả</h5></td>
                                         </tr>
                                     </tbody>

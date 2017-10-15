@@ -14,7 +14,7 @@ public class ConnectMySQLLibrary {
 	public ConnectMySQLLibrary(){
 		this.url = "jdbc:mysql://localhost:3306/nckhbachkhoa?useUnicode=true&characterEncoding=UTF-8";
 		this.user  = "root";
-		this.pass = "";
+		this.pass = "1234";
 	}
 	
     public Connection getConnectMySQL(){
