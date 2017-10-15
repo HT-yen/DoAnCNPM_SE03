@@ -2,25 +2,25 @@ package model.bean;
 
 public class LoaiTaiKhoan {
 
-	private String  idLoaiTaiKhoan;
+	private int  id_LoaiTaiKhoan;
 	private String  tenLoaiTaiKhoan;
 	
 	public LoaiTaiKhoan() {
 		super();
 	}
 
-	public LoaiTaiKhoan(String idLoaiTaiKhoan, String tenLoaiTaiKhoan) {
+	public LoaiTaiKhoan(int id_LoaiTaiKhoan, String tenLoaiTaiKhoan) {
 		super();
-		this.idLoaiTaiKhoan = idLoaiTaiKhoan;
+		this.id_LoaiTaiKhoan = id_LoaiTaiKhoan;
 		this.tenLoaiTaiKhoan = tenLoaiTaiKhoan;
 	}
 
-	public String getIdLoaiTaiKhoan() {
-		return idLoaiTaiKhoan;
+	public int getid_LoaiTaiKhoan() {
+		return id_LoaiTaiKhoan;
 	}
 
-	public void setIdLoaiTaiKhoan(String idLoaiTaiKhoan) {
-		this.idLoaiTaiKhoan = idLoaiTaiKhoan;
+	public void setid(int id_LoaiTaiKhoan) {
+		this.id_LoaiTaiKhoan = id_LoaiTaiKhoan;
 	}
 
 	public String getTenLoaiTaiKhoan() {
@@ -33,7 +33,7 @@ public class LoaiTaiKhoan {
 
 	@Override
 	public String toString() {
-		return "LoaiTaiKhoan [idLoaiTaiKhoan=" + idLoaiTaiKhoan
+		return "LoaiTaiKhoan [id_LoaiTaiKhoan=" + id_LoaiTaiKhoan
 				+ ", tenLoaiTaiKhoan=" + tenLoaiTaiKhoan + "]";
 	}
 	

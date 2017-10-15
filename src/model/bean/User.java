@@ -2,7 +2,7 @@ package model.bean;
 
 public class User {
 	
-	private String idUser;
+	private int idUser;
 	private String tenUser;
 	private String chucDanhKhoaHoc;
 	private String diaChiCoQuan;
@@ -10,23 +10,23 @@ public class User {
 	private String hocVi;
 	private String namSinh;
 	private String diaChiNhaRieng;
-	private int dienThoaiNhaRieng;
+	private String dienThoaiNhaRieng;
 	private String email;
 	private String fax;
 	private String taiKhoan;
 	private String matKhau;
-	private String idLoaiTaiKhoan;
-	private String idKhoa;
+	private int idLoaiTaiKhoan;
+	private int idKhoa;
 	
 	public User() {
 		super();
 	}
 
-	public User(String idUser, String tenUser, String chucDanhKhoaHoc,
+	public User(int idUser, String tenUser, String chucDanhKhoaHoc,
 			String diaChiCoQuan, String dienThoaiCoQuan, String hocVi,
-			String namSinh, String diaChiNhaRieng, int dienThoaiNhaRieng,
+			String namSinh, String diaChiNhaRieng, String dienThoaiNhaRieng,
 			String email, String fax, String taiKhoan, String matKhau,
-			String idLoaiTaiKhoan, String idKhoa) {
+			int idLoaiTaiKhoan, int idKhoa) {
 		super();
 		this.idUser = idUser;
 		this.tenUser = tenUser;
@@ -45,11 +45,11 @@ public class User {
 		this.idKhoa = idKhoa;
 	}
 
-	public String getIdUser() {
+	public int getIdUser() {
 		return idUser;
 	}
 
-	public void setIdUser(String idUser) {
+	public void setIdUser(int idUser) {
 		this.idUser = idUser;
 	}
 
@@ -109,11 +109,11 @@ public class User {
 		this.diaChiNhaRieng = diaChiNhaRieng;
 	}
 
-	public int getDienThoaiNhaRieng() {
+	public String getDienThoaiNhaRieng() {
 		return dienThoaiNhaRieng;
 	}
 
-	public void setDienThoaiNhaRieng(int dienThoaiNhaRieng) {
+	public void setDienThoaiNhaRieng(String dienThoaiNhaRieng) {
 		this.dienThoaiNhaRieng = dienThoaiNhaRieng;
 	}
 
@@ -149,19 +149,19 @@ public class User {
 		this.matKhau = matKhau;
 	}
 
-	public String getIdLoaiTaiKhoan() {
+	public int getIdLoaiTaiKhoan() {
 		return idLoaiTaiKhoan;
 	}
 
-	public void setIdLoaiTaiKhoan(String idLoaiTaiKhoan) {
+	public void setIdLoaiTaiKhoan(int idLoaiTaiKhoan) {
 		this.idLoaiTaiKhoan = idLoaiTaiKhoan;
 	}
 
-	public String getIdKhoa() {
+	public int getIdKhoa() {
 		return idKhoa;
 	}
 
-	public void setIdKhoa(String idKhoa) {
+	public void setIdKhoa(int idKhoa) {
 		this.idKhoa = idKhoa;
 	}
 
@@ -172,7 +172,7 @@ public class User {
 				+ diaChiCoQuan + ", dienThoaiCoQuan=" + dienThoaiCoQuan
 				+ ", hocVi=" + hocVi + ", namSinh=" + namSinh
 				+ ", diaChiNhaRieng=" + diaChiNhaRieng + ", dienThoaiNhaRieng="
-				+ dienThoaiNhaRieng + ", email=" + email + ", fax=" + fax
+				+ ", email=" + email + ", fax=" + fax
 				+ ", taiKhoan=" + taiKhoan + ", matKhau=" + matKhau
 				+ ", idLoaiTaiKhoan=" + idLoaiTaiKhoan + ", idKhoa=" + idKhoa
 				+ "]";
