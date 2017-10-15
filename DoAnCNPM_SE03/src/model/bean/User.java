@@ -2,34 +2,37 @@ package model.bean;
 
 public class User {
 	
-	private String idUser;
-	private String tenUser;
+	private int idUser;
+	private String fullName;
 	private String chucDanhKhoaHoc;
 	private String diaChiCoQuan;
 	private String dienThoaiCoQuan;
 	private String hocVi;
 	private String namSinh;
 	private String diaChiNhaRieng;
-	private int dienThoaiNhaRieng;
+	private String dienThoaiNhaRieng;
 	private String email;
 	private String fax;
-	private String taiKhoan;
+	private String userName;
 	private String matKhau;
-	private String idLoaiTaiKhoan;
-	private String idKhoa;
+	private int idLoaiTaiKhoan;
+	private String tenLoaiTaiKhoan;
+	private int idKhoa;
+	private String tenKhoa;
 	
 	public User() {
 		super();
 	}
 
-	public User(String idUser, String tenUser, String chucDanhKhoaHoc,
+	public User(int idUser, String fullName, String chucDanhKhoaHoc,
 			String diaChiCoQuan, String dienThoaiCoQuan, String hocVi,
-			String namSinh, String diaChiNhaRieng, int dienThoaiNhaRieng,
-			String email, String fax, String taiKhoan, String matKhau,
-			String idLoaiTaiKhoan, String idKhoa) {
+			String namSinh, String diaChiNhaRieng, String dienThoaiNhaRieng,
+			String email, String fax, String userName, String matKhau,
+			int idLoaiTaiKhoan, String tenLoaiTaiKhoan, int idKhoa,
+			String tenKhoa) {
 		super();
 		this.idUser = idUser;
-		this.tenUser = tenUser;
+		this.fullName = fullName;
 		this.chucDanhKhoaHoc = chucDanhKhoaHoc;
 		this.diaChiCoQuan = diaChiCoQuan;
 		this.dienThoaiCoQuan = dienThoaiCoQuan;
@@ -39,26 +42,28 @@ public class User {
 		this.dienThoaiNhaRieng = dienThoaiNhaRieng;
 		this.email = email;
 		this.fax = fax;
-		this.taiKhoan = taiKhoan;
+		this.userName = userName;
 		this.matKhau = matKhau;
 		this.idLoaiTaiKhoan = idLoaiTaiKhoan;
+		this.tenLoaiTaiKhoan = tenLoaiTaiKhoan;
 		this.idKhoa = idKhoa;
+		this.tenKhoa = tenKhoa;
 	}
 
-	public String getIdUser() {
+	public int getIdUser() {
 		return idUser;
 	}
 
-	public void setIdUser(String idUser) {
+	public void setIdUser(int idUser) {
 		this.idUser = idUser;
 	}
 
-	public String getTenUser() {
-		return tenUser;
+	public String getFullName() {
+		return fullName;
 	}
 
-	public void setTenUser(String tenUser) {
-		this.tenUser = tenUser;
+	public void setFullName(String fullName) {
+		this.fullName = fullName;
 	}
 
 	public String getChucDanhKhoaHoc() {
@@ -109,11 +114,11 @@ public class User {
 		this.diaChiNhaRieng = diaChiNhaRieng;
 	}
 
-	public int getDienThoaiNhaRieng() {
+	public String getDienThoaiNhaRieng() {
 		return dienThoaiNhaRieng;
 	}
 
-	public void setDienThoaiNhaRieng(int dienThoaiNhaRieng) {
+	public void setDienThoaiNhaRieng(String dienThoaiNhaRieng) {
 		this.dienThoaiNhaRieng = dienThoaiNhaRieng;
 	}
 
@@ -133,12 +138,12 @@ public class User {
 		this.fax = fax;
 	}
 
-	public String getTaiKhoan() {
-		return taiKhoan;
+	public String getUserName() {
+		return userName;
 	}
 
-	public void setTaiKhoan(String taiKhoan) {
-		this.taiKhoan = taiKhoan;
+	public void setUserName(String userName) {
+		this.userName = userName;
 	}
 
 	public String getMatKhau() {
@@ -149,37 +154,54 @@ public class User {
 		this.matKhau = matKhau;
 	}
 
-	public String getIdLoaiTaiKhoan() {
+	public int getIdLoaiTaiKhoan() {
 		return idLoaiTaiKhoan;
 	}
 
-	public void setIdLoaiTaiKhoan(String idLoaiTaiKhoan) {
+	public void setIdLoaiTaiKhoan(int idLoaiTaiKhoan) {
 		this.idLoaiTaiKhoan = idLoaiTaiKhoan;
 	}
 
-	public String getIdKhoa() {
+	public String getTenLoaiTaiKhoan() {
+		return tenLoaiTaiKhoan;
+	}
+
+	public void setTenLoaiTaiKhoan(String tenLoaiTaiKhoan) {
+		this.tenLoaiTaiKhoan = tenLoaiTaiKhoan;
+	}
+
+	public int getIdKhoa() {
 		return idKhoa;
 	}
 
-	public void setIdKhoa(String idKhoa) {
+	public void setIdKhoa(int idKhoa) {
 		this.idKhoa = idKhoa;
+	}
+
+	public String getTenKhoa() {
+		return tenKhoa;
+	}
+
+	public void setTenKhoa(String tenKhoa) {
+		this.tenKhoa = tenKhoa;
 	}
 
 	@Override
 	public String toString() {
-		return "User [idUser=" + idUser + ", tenUser=" + tenUser
+		return "User [idUser=" + idUser + ", fullName=" + fullName
 				+ ", chucDanhKhoaHoc=" + chucDanhKhoaHoc + ", diaChiCoQuan="
 				+ diaChiCoQuan + ", dienThoaiCoQuan=" + dienThoaiCoQuan
 				+ ", hocVi=" + hocVi + ", namSinh=" + namSinh
 				+ ", diaChiNhaRieng=" + diaChiNhaRieng + ", dienThoaiNhaRieng="
 				+ dienThoaiNhaRieng + ", email=" + email + ", fax=" + fax
-				+ ", taiKhoan=" + taiKhoan + ", matKhau=" + matKhau
-				+ ", idLoaiTaiKhoan=" + idLoaiTaiKhoan + ", idKhoa=" + idKhoa
-				+ "]";
+				+ ", userName=" + userName + ", matKhau=" + matKhau
+				+ ", idLoaiTaiKhoan=" + idLoaiTaiKhoan + ", tenLoaiTaiKhoan="
+				+ tenLoaiTaiKhoan + ", idKhoa=" + idKhoa + ", tenKhoa="
+				+ tenKhoa + "]";
 	}
 
 	
 	
-	
+
 	
 }

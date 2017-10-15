@@ -68,55 +68,66 @@
 			
 			
             <div class="page_content">
+            
+            
 				
 			<table align="center" border="1" cellpadding="1" cellspacing="1" style="width: 800px; height:20px;">
+			 <%
+			   User objUser = null;
+			   if(request.getAttribute("objUser")!=null){
+				     objUser =  (User)request.getAttribute("objUser");
+			   }
+			 %>
 				<tbody>
 					<tr>
 						<td width="4%;" colspan="3">Lý lịch khoa học</td>
 					</tr>
 					
 					<tr>
-						<td width="4%;">1</td> <td width="25%;" style="font-weight:bold;">Họ tên</td>  <td> Trương Bảo</td>
+						<td width="4%;">1</td> <td width="25%;" style="font-weight:bold;">Họ tên</td>  <td> <%=objUser.getFullName() %> </td>
 					</tr>
 					<tr>
-						<td width="4%;">2</td> <td width="25%;" style="font-weight:bold;">Chức danh khoa học</td>  <td> Phó Giáo sư; công nhận năm: 2010 </td>
+						<td width="4%;">2</td> <td width="25%;" style="font-weight:bold;">Chức danh khoa học</td>  <td> <%=objUser.getChucDanhKhoaHoc() %> </td>
 					</tr>
 					<tr>
-						<td width="4%;">3</td> <td width="25%;" style="font-weight:bold;">Địa chỉ cơ quan</td>  <td> Trường Đại học Bách Khoa Đà nẵng </td>
+						<td width="4%;">3</td> <td width="25%;" style="font-weight:bold;">Địa chỉ cơ quan</td>  <td> <%=objUser.getDiaChiCoQuan() %> </td>
 					</tr>
 					<tr>
-						<td width="4%;">4</td> <td width="25%;" style="font-weight:bold;">Điện thoại cơ quan</td>  <td> 051138273633 </td>
+						<td width="4%;">4</td> <td width="25%;" style="font-weight:bold;">Điện thoại cơ quan</td>  <td> <%=objUser.getDienThoaiCoQuan() %> </td>
 					</tr>
 					<tr>
-						<td width="4%;">5</td> <td width="25%;" style="font-weight:bold;">Học vị</td>  <td> Tiến sĩ; năm: 2003; Chuyên ngành: Công nghệ thực phẩm; Tại: Đại học Đà Nẵng. </td>
+						<td width="4%;">5</td> <td width="25%;" style="font-weight:bold;">Học vị</td>  <td> <%=objUser.getHocVi() %> </td>
 					</tr>
 					<tr>
-						<td width="4%;">6</td> <td width="25%;" style="font-weight:bold;">Năm sinh</td>  <td> 03/08/1960 </td>
+						<td width="4%;">6</td> <td width="25%;" style="font-weight:bold;">Năm sinh</td>  <td> <%=objUser.getNamSinh() %> </td>
 					</tr>
 					<tr>
-						<td width="4%;">7</td> <td width="25%;" style="font-weight:bold;">Địa chỉ nhà riêng</td>  <td> 634/2 Trưng Nữ Vương- Đà Nẵng </td>
+						<td width="4%;">7</td> <td width="25%;" style="font-weight:bold;">Địa chỉ nhà riêng</td>  <td> <%=objUser.getDiaChiNhaRieng() %> </td>
 					</tr>
 					<tr>
-						<td width="4%;">8</td> <td width="25%;" style="font-weight:bold;">Số điện thoại di động</td>  <td> 016538829292 </td>
+						<td width="4%;">8</td> <td width="25%;" style="font-weight:bold;">Số điện thoại di động</td>  <td> <%=objUser.getDienThoaiNhaRieng() %> </td>
 					</tr>
 					<tr>
-						<td width="4%;">9</td> <td width="25%;" style="font-weight:bold;">Email</td>  <td> baot3bk@gmail.com </td>
+						<td width="4%;">9</td> <td width="25%;" style="font-weight:bold;">Email</td>  <td> <%=objUser.getEmail() %></td>
 					</tr>
 					<tr>
-						<td width="4%;">10</td> <td width="25%;" style="font-weight:bold;">Tên tài khoản</td>  <td> nguyenvanbinh1312 </td>
+						<td width="4%;">10</td> <td width="25%;" style="font-weight:bold;">Tên tài khoản</td>  <td> <%=objUser.getUserName() %> </td>
 					</tr>
 					<tr>
-						<td width="4%;">11</td> <td width="25%;" style="font-weight:bold;">Loại tài khoản</td>  <td> Quản lý NCKH cấp khoa </td>
+						<td width="4%;">11</td> <td width="25%;" style="font-weight:bold;">Loại tài khoản</td>  <td> <%=objUser.getTenLoaiTaiKhoan() %> </td>
 					</tr>
 					<tr>
-						<td width="4%;">12</td> <td width="25%;" style="font-weight:bold;">Đơn vị công tác</td>  <td> Khoa hóa , Trường đại học bách khoa </td>
+						<td width="4%;">12</td> <td width="25%;" style="font-weight:bold;">Đơn vị công tác(Khoa)</td>  <td> <%=objUser.getTenKhoa() %> </td>
 					</tr>
 					<tr>
-						<td width="4%;">13</td> <td width="25%;" style="font-weight:bold;">Fax</td>  <td> 001-1927993 </td>
+						<td width="4%;">13</td> <td width="25%;" style="font-weight:bold;">Fax</td>  <td> <%=objUser.getFax() %> </td>
 					</tr>
 					
 				</tbody>
+			 
 			</table>
+			
+			
 
 			<p>&nbsp;</p>
 			

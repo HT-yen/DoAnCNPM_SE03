@@ -2,24 +2,24 @@ package model.bean;
 
 public class LinhVucNC {
 
-	private String idLinhVucNghienCuu;
+	private int idLinhVucNghienCuu;
 	private String tenLinhVucNghienCuu;
 	
 	public LinhVucNC() {
 		super();
 	}
 
-	public LinhVucNC(String idLinhVucNghienCuu, String tenLinhVucNghienCuu) {
+	public LinhVucNC(int idLinhVucNghienCuu, String tenLinhVucNghienCuu) {
 		super();
 		this.idLinhVucNghienCuu = idLinhVucNghienCuu;
 		this.tenLinhVucNghienCuu = tenLinhVucNghienCuu;
 	}
 
-	public String getIdLinhVucNghienCuu() {
+	public int getIdLinhVucNghienCuu() {
 		return idLinhVucNghienCuu;
 	}
 
-	public void setIdLinhVucNghienCuu(String idLinhVucNghienCuu) {
+	public void setIdLinhVucNghienCuu(int idLinhVucNghienCuu) {
 		this.idLinhVucNghienCuu = idLinhVucNghienCuu;
 	}
 
@@ -36,6 +36,7 @@ public class LinhVucNC {
 		return "LinhVucNC [idLinhVucNghienCuu=" + idLinhVucNghienCuu
 				+ ", tenLinhVucNghienCuu=" + tenLinhVucNghienCuu + "]";
 	}
+
 	
 	
 	

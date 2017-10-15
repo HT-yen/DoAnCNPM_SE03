@@ -22,6 +22,46 @@ public class UserDAO {
 		  connectMySQLLibrary = new ConnectMySQLLibrary();
 	}
 	
+	
+public User checkLoginPublic(String username, String password) {
+		
+        conn = connectMySQLLibrary.getConnectMySQL();
+        
+        String sql = "select u.*, k.tenKhoa, ltk.tenLoaiTaiKhoan from user AS u "
+        		+ " INNER JOIN loaitaikhoan AS ltk ON ltk.idLoaiTaiKhoan = u.idLoaiTaiKhoan  "
+        		+ " INNER JOIN  khoa AS k ON k.idKhoa = u.idKhoa "
+        		+ " where userName = ? and matKhau = ? ";
+        
+        User objUser = null;
+        try {
+			pst = conn.prepareStatement(sql);
+			
+			pst.setString(1, username);
+			pst.setString(2, password);
+			
+			rs = pst.executeQuery();
+			if(rs.next()){
+			  objUser = new User(rs.getInt("idUser"),rs.getString("fullName"),rs.getString("chucDanhKhoaHoc") ,rs.getString("diaChiCoQuan") ,
+					             rs.getString("dienThoaiCoQuan") ,rs.getString("hocVi"),rs.getString("namSinh") ,rs.getString("diaChiNhaRieng") , 
+					             rs.getString("dienThoaiNhaRieng") ,rs.getString("email") ,rs.getString("fax"),rs.getString("userName") , 
+					             rs.getString("matKhau") ,rs.getInt("idLoaiTaiKhoan"),rs.getString("tenLoaiTaiKhoan") ,rs.getInt("idKhoa"), rs.getString("tenKhoa") );
+			}
+			
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}finally{
+			try {
+				pst.close();
+				conn.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		
+		return objUser;
+	}
+	
 /*	public ArrayList<User> getItems(){
 		ArrayList<User> listUser = new ArrayList<>();
 		conn = connectMySQLLibrary.getConnectMySQL();

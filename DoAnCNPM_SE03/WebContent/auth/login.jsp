@@ -38,19 +38,30 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6">
+            
+             <%
+		        if(request.getParameter("msg")!=null){
+		          int msg = Integer.parseInt( request.getParameter("msg") );
+		          switch(msg){
+		           // case 1: out.print("<h4 style='color : white ;border: 1px solid;padding: 4px 6px;border-radius: 4px;  background: #58a808; color: #FFF; font-weight: bold'>Xóa thành công !!</h4> ");break;
+		            case 0: out.print("<h4 style='color :red'> Username hoặc password không hợp lệ ! </h4> ");break;
+		           	     }
+		           }
+	          %>       
+            
 				<h1 class="default_title">Đăng nhập</h1>
 				
                 <div class="section-article contactpage">
 				
-                   	<form accept-charset='UTF-8' action='index.html' id='contact' method='post'>
+                   	<form accept-charset='UTF-8' action="<%=request.getContextPath() %>/auth/public/login" method="post" id='contact' >
 						
 						<div class="form-inline form-comment">
 						
 							<div class="col-xs-12 col-sm-12 col-md-12 no-padding-lr form-group">
-								<input placeholder="Tên Đăng Nhập:" id="email" name="" class="form-control" type="email" value="" />
+								<input placeholder="Tên Đăng Nhập:" id="username" name="username" class="form-control" type=text />
 							</div>
 							<div class="col-xs-12 col-sm-12 col-md-12 no-padding-lr form-group">
-								<input placeholder="Mật Khẩu:" id="pass" name="" class="form-control" type="email" value="" />
+								<input placeholder="Mật Khẩu:" id="password" name="password" class="form-control" type="password" />
 							</div>
 							
 							<input type="submit"  class="btn btn-cart btn-default"  value="Đăng nhập" />

@@ -2,24 +2,24 @@ package model.bean;
 
 public class LoaiHinhNC {
 	
-	private String idLoaiHinhNghienCuu;
+	private int idLoaiHinhNghienCuu;
 	private String tenLoaiHinhNghienCuu;
 	
 	public LoaiHinhNC() {
 		super();
 	}
 
-	public LoaiHinhNC(String idLoaiHinhNghienCuu, String tenLoaiHinhNghienCuu) {
+	public LoaiHinhNC(int idLoaiHinhNghienCuu, String tenLoaiHinhNghienCuu) {
 		super();
 		this.idLoaiHinhNghienCuu = idLoaiHinhNghienCuu;
 		this.tenLoaiHinhNghienCuu = tenLoaiHinhNghienCuu;
 	}
 
-	public String getIdLoaiHinhNghienCuu() {
+	public int getIdLoaiHinhNghienCuu() {
 		return idLoaiHinhNghienCuu;
 	}
 
-	public void setIdLoaiHinhNghienCuu(String idLoaiHinhNghienCuu) {
+	public void setIdLoaiHinhNghienCuu(int idLoaiHinhNghienCuu) {
 		this.idLoaiHinhNghienCuu = idLoaiHinhNghienCuu;
 	}
 
@@ -36,6 +36,8 @@ public class LoaiHinhNC {
 		return "LoaiHinhNC [idLoaiHinhNghienCuu=" + idLoaiHinhNghienCuu
 				+ ", tenLoaiHinhNghienCuu=" + tenLoaiHinhNghienCuu + "]";
 	}
+
+	
 	
 	
 

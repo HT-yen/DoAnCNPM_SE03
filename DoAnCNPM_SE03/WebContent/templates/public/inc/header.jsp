@@ -1,6 +1,9 @@
+<%@page import="model.bean.User"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    
+<%@page import="java.util.ArrayList"%>
+<%@page import="model.bean.Cat"%>
+<%@page import="model.dao.CatDAO"%>    
     
 <!DOCTYPE html>
 
@@ -176,7 +179,7 @@ j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; 
 													
 													
 													<li class="first ">
-														<a href="<%=request.getContextPath()%>/home" class="menu_active"><span>Trang chủ</span></a>
+														<a href="<%=request.getContextPath()%>/" class="menu_active"><span>Trang chủ</span></a>
 													</li>
 													
 													<li class=" sub-menu"><a href="<%=request.getContextPath()%>/gioi-thieu" class=""><span>Giới thiệu</span></a>
@@ -191,6 +194,10 @@ j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; 
 
 													</li>
 													
+												
+													<%  
+													  if(session.getAttribute("sobjUserPublic") != null ){
+													 %>
 													<li class="">
 														<a href="<%=request.getContextPath()%>/thong-bao" class=""><span>Thông báo</span></a>
 													</li>
@@ -219,16 +226,33 @@ j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; 
 
 													</li>
 													
-													
-													
-													<li class="last ">
-														<a href="<%=request.getContextPath()%>/auth/show-login" class=""><span>Đăng nhập</span></a>
-													</li>
-													
+													<%}%>
 													
 													<li class="last ">
 														<a href="<%=request.getContextPath()%>/lien-he" class=""><span>Liên Hệ</span></a>
 													</li>
+													
+													
+													<%
+													if(session.getAttribute("sobjUserPublic") != null ){
+														 User sobjUserPublic = (User)session.getAttribute("sobjUserPublic");
+													%>
+													<li class="last ">
+														 <a href="<%=request.getContextPath()%>/auth/public/logout" class=""><span>Đăng Xuất</span></a>
+													</li>
+													<li class="last " style="margin-left: -22px;margin-right: -25px;"><a><span>>></span></a> </li>
+													<li class="last ">
+													   <a href="<%=request.getContextPath()%>/quanly-taikhoan"> <span> <%=sobjUserPublic.getFullName() %> </span></a>
+													</li>
+													<%}else{ %>
+													
+													<li class="last ">
+														<a href="<%=request.getContextPath()%>/auth/public/login" class=""><span>Đăng nhập</span></a>
+													</li>
+													<%} %>
+													
+													
+													
 													
 													
 

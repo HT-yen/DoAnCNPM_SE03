@@ -4,15 +4,15 @@ import java.sql.Timestamp;
 
 public class DeTai {
 	
-	private String idDeTai;
+	private int idDeTai;
 	private String tenDeTai;
 	private String maSoDeTai;
-	private String idLinhVucNghienCuu;
-	private String idLoaiHinhNghienCuu;
+	private int idLinhVucNghienCuu;
+	private int idLoaiHinhNghienCuu;
 	private Timestamp thoiGianBatDau;
 	private Timestamp thoiGianKetThuc;
 	private String donViChuTri;
-	private String idUser;
+	private int idUser;
 	private String donViPhoiHopChinh;
 	private String tongQuan;
 	private String tinhCapThiet;
@@ -30,10 +30,10 @@ public class DeTai {
 		super();
 	}
 
-	public DeTai(String idDeTai, String tenDeTai, String maSoDeTai,
-			String idLinhVucNghienCuu, String idLoaiHinhNghienCuu,
+	public DeTai(int idDeTai, String tenDeTai, String maSoDeTai,
+			int idLinhVucNghienCuu, int idLoaiHinhNghienCuu,
 			Timestamp thoiGianBatDau, Timestamp thoiGianKetThuc,
-			String donViChuTri, String idUser, String donViPhoiHopChinh,
+			String donViChuTri, int idUser, String donViPhoiHopChinh,
 			String tongQuan, String tinhCapThiet, String mucTieu,
 			String phamViNghienCuu, String phuongPhapNghienCuu, String noiDung,
 			String sanPham, String hieuQua, int kinhPhiThucHien,
@@ -62,11 +62,11 @@ public class DeTai {
 		this.capDeTai = capDeTai;
 	}
 
-	public String getIdDeTai() {
+	public int getIdDeTai() {
 		return idDeTai;
 	}
 
-	public void setIdDeTai(String idDeTai) {
+	public void setIdDeTai(int idDeTai) {
 		this.idDeTai = idDeTai;
 	}
 
@@ -86,19 +86,19 @@ public class DeTai {
 		this.maSoDeTai = maSoDeTai;
 	}
 
-	public String getIdLinhVucNghienCuu() {
+	public int getIdLinhVucNghienCuu() {
 		return idLinhVucNghienCuu;
 	}
 
-	public void setIdLinhVucNghienCuu(String idLinhVucNghienCuu) {
+	public void setIdLinhVucNghienCuu(int idLinhVucNghienCuu) {
 		this.idLinhVucNghienCuu = idLinhVucNghienCuu;
 	}
 
-	public String getIdLoaiHinhNghienCuu() {
+	public int getIdLoaiHinhNghienCuu() {
 		return idLoaiHinhNghienCuu;
 	}
 
-	public void setIdLoaiHinhNghienCuu(String idLoaiHinhNghienCuu) {
+	public void setIdLoaiHinhNghienCuu(int idLoaiHinhNghienCuu) {
 		this.idLoaiHinhNghienCuu = idLoaiHinhNghienCuu;
 	}
 
@@ -126,11 +126,11 @@ public class DeTai {
 		this.donViChuTri = donViChuTri;
 	}
 
-	public String getIdUser() {
+	public int getIdUser() {
 		return idUser;
 	}
 
-	public void setIdUser(String idUser) {
+	public void setIdUser(int idUser) {
 		this.idUser = idUser;
 	}
 
@@ -246,6 +246,8 @@ public class DeTai {
 				+ ", kinhPhiThucHien=" + kinhPhiThucHien + ", trangThai="
 				+ trangThai + ", capDeTai=" + capDeTai + "]";
 	}
+
+	
 	
 	
 	

@@ -57,7 +57,7 @@
     	    %>
             <div class="logo">
                 <a href="<%=request.getContextPath()%>/admin/show-user?uid=<%=sobjUser.getIdUser() %>" class="simple-text"><img src="<%=request.getContextPath() %>/templates/admin/img/faces/face-3.jpg" class="img-circle" style="display:inline-block; width:130px;height:100px">
-                	<h5><%=sobjUser.getUsername() %></h5>
+                	 <h5> truongcongbao </h5> 
                 </a>
             </div>
             <%} else { %>
@@ -74,12 +74,21 @@
                         <p>Trang quản lý</p>
                     </a>
                 </li>
+                
                 <li class="">
+                    <a href="<%=request.getContextPath() %>/admin/cat/index">
+                        <!-- <i class="ti-user"></i> -->
+                        <p>Quản lý danh mục</p>
+                    </a>
+                </li>
+                
+                 <li class="">
                     <a href="<%=request.getContextPath() %>/admin/users">
                         <!-- <i class="ti-user"></i> -->
                         <p>Quản lý tài khoản</p>
                     </a>
                 </li>
+                
                  <li>
                     <a href="index.html">
                         <!-- <i class="ti-view-list-alt"></i> -->

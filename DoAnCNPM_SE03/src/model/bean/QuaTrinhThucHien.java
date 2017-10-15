@@ -4,9 +4,9 @@ import java.sql.Timestamp;
 
 public class QuaTrinhThucHien {
 
-	private String idQuaTrinhThucHien;
-	private String idGiangVien;
-	private String idDeTai;
+	private int idQuaTrinhThucHien;
+	private int idGiangVien;
+	private int idDeTai;
 	private String trangThai;
 	private Timestamp thoiGian;
 	private String chuDe;
@@ -16,8 +16,8 @@ public class QuaTrinhThucHien {
 		super();
 	}
 
-	public QuaTrinhThucHien(String idQuaTrinhThucHien, String idGiangVien,
-			String idDeTai, String trangThai, Timestamp thoiGian, String chuDe,
+	public QuaTrinhThucHien(int idQuaTrinhThucHien, int idGiangVien,
+			int idDeTai, String trangThai, Timestamp thoiGian, String chuDe,
 			String noiDung) {
 		super();
 		this.idQuaTrinhThucHien = idQuaTrinhThucHien;
@@ -29,27 +29,27 @@ public class QuaTrinhThucHien {
 		this.noiDung = noiDung;
 	}
 
-	public String getIdQuaTrinhThucHien() {
+	public int getIdQuaTrinhThucHien() {
 		return idQuaTrinhThucHien;
 	}
 
-	public void setIdQuaTrinhThucHien(String idQuaTrinhThucHien) {
+	public void setIdQuaTrinhThucHien(int idQuaTrinhThucHien) {
 		this.idQuaTrinhThucHien = idQuaTrinhThucHien;
 	}
 
-	public String getIdGiangVien() {
+	public int getIdGiangVien() {
 		return idGiangVien;
 	}
 
-	public void setIdGiangVien(String idGiangVien) {
+	public void setIdGiangVien(int idGiangVien) {
 		this.idGiangVien = idGiangVien;
 	}
 
-	public String getIdDeTai() {
+	public int getIdDeTai() {
 		return idDeTai;
 	}
 
-	public void setIdDeTai(String idDeTai) {
+	public void setIdDeTai(int idDeTai) {
 		this.idDeTai = idDeTai;
 	}
 
@@ -92,9 +92,6 @@ public class QuaTrinhThucHien {
 				+ ", trangThai=" + trangThai + ", thoiGian=" + thoiGian
 				+ ", chuDe=" + chuDe + ", noiDung=" + noiDung + "]";
 	}
-	
-	
-	
-	
+
 	
 }

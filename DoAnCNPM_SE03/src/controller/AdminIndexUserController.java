@@ -29,10 +29,14 @@ public class AdminIndexUserController extends HttpServlet {
          request.setCharacterEncoding("UTF-8");
          response.setCharacterEncoding("UTF-8");
          response.setContentType("text/html");
-       //kiểm tra đã đăng nhập chưa
+       
+         
+        /*//kiểm tra đã đăng nhập chưa
  		if(  LibraryAuth.CheckLogin(request, response)==false){
  			return;
- 		}
+ 		}*/
+         
+         
          
          /*UserDAO objDAO = new UserDAO();
          
@@ -40,6 +44,7 @@ public class AdminIndexUserController extends HttpServlet {
  		 int current_page = 1;		
  		 
  		 //tong so tin
+ 		  * +
  		 int sumUser = objDAO.countUser();
  		 
  		// tong so trang
@@ -60,10 +65,10 @@ public class AdminIndexUserController extends HttpServlet {
          
         //ArrayList<User> listUser = objDAO.getItems();
         //request.setAttribute("listUser", listUser);
-         
+         */
          RequestDispatcher rd = request.getRequestDispatcher("/admin/indexUser.jsp");
          rd.forward(request, response);
-*/
+
 		
 	}
 

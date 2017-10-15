@@ -4,14 +4,14 @@ import java.sql.Timestamp;
 
 public class HopDong {
 	
-	private String idHopDong;
+	private int idHopDong;
 	private String tenKhachHang;
 	private String chucVuKH;
 	private String diaChiKH;
 	private String emailKH;
-	private String idNguoiDaiDien;
-	private String idGiangVien;
-	private String idDeTai;
+	private int idNguoiDaiDien;
+	private int idGiangVien;
+	private int idDeTai;
 	private Timestamp thoiGianBatDau;
 	private Timestamp thoiGianKetThuc;
 	private int kinhPhi;
@@ -25,9 +25,9 @@ public class HopDong {
 	}
 
 
-	public HopDong(String idHopDong, String tenKhachHang, String chucVuKH,
-			String diaChiKH, String emailKH, String idNguoiDaiDien,
-			String idGiangVien, String idDeTai, Timestamp thoiGianBatDau,
+	public HopDong(int idHopDong, String tenKhachHang, String chucVuKH,
+			String diaChiKH, String emailKH, int idNguoiDaiDien,
+			int idGiangVien, int idDeTai, Timestamp thoiGianBatDau,
 			Timestamp thoiGianKetThuc, int kinhPhi,
 			Timestamp thoiGianKyHopDong, String dienThoaiKH,
 			String trangThaiHopDong) {
@@ -49,12 +49,12 @@ public class HopDong {
 	}
 
 
-	public String getIdHopDong() {
+	public int getIdHopDong() {
 		return idHopDong;
 	}
 
 
-	public void setIdHopDong(String idHopDong) {
+	public void setIdHopDong(int idHopDong) {
 		this.idHopDong = idHopDong;
 	}
 
@@ -99,32 +99,32 @@ public class HopDong {
 	}
 
 
-	public String getIdNguoiDaiDien() {
+	public int getIdNguoiDaiDien() {
 		return idNguoiDaiDien;
 	}
 
 
-	public void setIdNguoiDaiDien(String idNguoiDaiDien) {
+	public void setIdNguoiDaiDien(int idNguoiDaiDien) {
 		this.idNguoiDaiDien = idNguoiDaiDien;
 	}
 
 
-	public String getIdGiangVien() {
+	public int getIdGiangVien() {
 		return idGiangVien;
 	}
 
 
-	public void setIdGiangVien(String idGiangVien) {
+	public void setIdGiangVien(int idGiangVien) {
 		this.idGiangVien = idGiangVien;
 	}
 
 
-	public String getIdDeTai() {
+	public int getIdDeTai() {
 		return idDeTai;
 	}
 
 
-	public void setIdDeTai(String idDeTai) {
+	public void setIdDeTai(int idDeTai) {
 		this.idDeTai = idDeTai;
 	}
 
@@ -201,6 +201,8 @@ public class HopDong {
 				+ ", dienThoaiKH=" + dienThoaiKH + ", trangThaiHopDong="
 				+ trangThaiHopDong + "]";
 	}
+
+    
 	
 	
 

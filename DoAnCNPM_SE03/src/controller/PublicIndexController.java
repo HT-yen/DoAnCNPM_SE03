@@ -25,4 +25,6 @@ public class PublicIndexController extends HttpServlet {
          rd.forward(request, response);
 	}
 
+	
+	
 }

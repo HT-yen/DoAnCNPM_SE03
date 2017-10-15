@@ -12,51 +12,46 @@
   
   <!-- ============== Auth ==================== -->
   
+  <!-- Đăng nhập trong public -->
   <servlet>
-    <servlet-name>AuthShowDangKyController</servlet-name>
-    <servlet-class>controller.AuthShowDangKyController</servlet-class>
+    <servlet-name>AuthPublicLoginController</servlet-name>
+    <servlet-class>controller.AuthPublicLoginController</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>AuthShowDangKyController</servlet-name>
-    <url-pattern>/auth/show-dangky</url-pattern>
+    <servlet-name>AuthPublicLoginController</servlet-name>
+    <url-pattern>/auth/public/login</url-pattern>
   </servlet-mapping>
   
+  <!-- Đăng xuất trong public -->
   <servlet>
-    <servlet-name>AuthDangKyController</servlet-name>
-    <servlet-class>controller.AuthDangKyController</servlet-class>
+    <servlet-name>AuthPublicLogoutController</servlet-name>
+    <servlet-class>controller.AuthPublicLogoutController</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>AuthDangKyController</servlet-name>
-    <url-pattern>/auth/dangky</url-pattern>
+    <servlet-name>AuthPublicLogoutController</servlet-name>
+    <url-pattern>/auth/public/logout</url-pattern>
   </servlet-mapping>
   
-  
+  <!-- Đăng nhập trong admin -->
   <servlet>
-    <servlet-name>AuthShowLoginController</servlet-name>
-    <servlet-class>controller.AuthShowLoginController</servlet-class>
+    <servlet-name>AuthAdminLoginController</servlet-name>
+    <servlet-class>controller.AuthAdminLoginController</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>AuthShowLoginController</servlet-name>
-    <url-pattern>/auth/show-login</url-pattern>
+    <servlet-name>AuthAdminLoginController</servlet-name>
+    <url-pattern>/auth/admin/login</url-pattern>
   </servlet-mapping>
   
+  <!-- Đăng xuất trong admin -->
   <servlet>
-    <servlet-name>AuthLoginController</servlet-name>
-    <servlet-class>controller.AuthLoginController</servlet-class>
+    <servlet-name>AuthAdminLogoutController</servlet-name>
+    <servlet-class>controller.AuthAdminLogoutController</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>AuthLoginController</servlet-name>
-    <url-pattern>/auth/login</url-pattern>
+    <servlet-name>AuthAdminLogoutController</servlet-name>
+    <url-pattern>/auth/admin/logout</url-pattern>
   </servlet-mapping>
   
-  <servlet>
-    <servlet-name>AuthLogoutController</servlet-name>
-    <servlet-class>controller.AuthLogoutController</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>AuthLogoutController</servlet-name>
-    <url-pattern>/auth/logout</url-pattern>
-  </servlet-mapping>
   
   <!-- ============== admin ==================== -->
   
@@ -70,6 +65,46 @@
     <url-pattern>/admin</url-pattern>
   </servlet-mapping>
   
+  <!--====== Cat ==========  -->
+  
+  <servlet>
+    <servlet-name>AdminIndexCatController</servlet-name>
+    <servlet-class>controller.AdminIndexCatController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AdminIndexCatController</servlet-name>
+    <url-pattern>/admin/cat/index</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>AdminAddCatController</servlet-name>
+    <servlet-class>controller.AdminAddCatController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AdminAddCatController</servlet-name>
+    <url-pattern>/admin/cat/add</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>AdminEditCatController</servlet-name>
+    <servlet-class>controller.AdminEditCatController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AdminEditCatController</servlet-name>
+    <url-pattern>/admin/cat/edit</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>AdminDelCatController</servlet-name>
+    <servlet-class>controller.AdminDelCatController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AdminDelCatController</servlet-name>
+    <url-pattern>/admin/cat/del</url-pattern>
+  </servlet-mapping>
+  
+  
+  <!--====== User ==========  -->
   <servlet>
     <servlet-name>AdminIndexUserController</servlet-name>
     <servlet-class>controller.AdminIndexUserController</servlet-class>
@@ -144,7 +179,7 @@
   </servlet>
   <servlet-mapping>
     <servlet-name>PublicIndexController</servlet-name>
-    <url-pattern>/home</url-pattern>
+    <url-pattern>/</url-pattern>
   </servlet-mapping>
   
   <servlet>

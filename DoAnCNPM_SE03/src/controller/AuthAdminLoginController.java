@@ -8,10 +8,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class AuthShowLoginController extends HttpServlet {
+public class AuthAdminLoginController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-    public AuthShowLoginController() {
+    public AuthAdminLoginController() {
         super();
     }
     
@@ -23,6 +23,8 @@ public class AuthShowLoginController extends HttpServlet {
          
          RequestDispatcher rd = request.getRequestDispatcher("/auth/login.jsp");
          rd.forward(request, response);
+         
+         
 	}
 
 }

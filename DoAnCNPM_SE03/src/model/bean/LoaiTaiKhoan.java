@@ -2,24 +2,24 @@ package model.bean;
 
 public class LoaiTaiKhoan {
 
-	private String  idLoaiTaiKhoan;
+	private int  idLoaiTaiKhoan;
 	private String  tenLoaiTaiKhoan;
 	
 	public LoaiTaiKhoan() {
 		super();
 	}
 
-	public LoaiTaiKhoan(String idLoaiTaiKhoan, String tenLoaiTaiKhoan) {
+	public LoaiTaiKhoan(int idLoaiTaiKhoan, String tenLoaiTaiKhoan) {
 		super();
 		this.idLoaiTaiKhoan = idLoaiTaiKhoan;
 		this.tenLoaiTaiKhoan = tenLoaiTaiKhoan;
 	}
 
-	public String getIdLoaiTaiKhoan() {
+	public int getIdLoaiTaiKhoan() {
 		return idLoaiTaiKhoan;
 	}
 
-	public void setIdLoaiTaiKhoan(String idLoaiTaiKhoan) {
+	public void setIdLoaiTaiKhoan(int idLoaiTaiKhoan) {
 		this.idLoaiTaiKhoan = idLoaiTaiKhoan;
 	}
 
@@ -36,10 +36,7 @@ public class LoaiTaiKhoan {
 		return "LoaiTaiKhoan [idLoaiTaiKhoan=" + idLoaiTaiKhoan
 				+ ", tenLoaiTaiKhoan=" + tenLoaiTaiKhoan + "]";
 	}
-	
-	
-	
-	
+
 	
 	
 }

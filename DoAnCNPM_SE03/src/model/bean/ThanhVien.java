@@ -2,18 +2,18 @@ package model.bean;
 
 public class ThanhVien {
 	
-	private String idThanhVien;
+	private int idThanhVien;
 	private String tenThanhVien;
 	private String donVi;
 	private String noiDungNghienCuu;
-	private String idDeTai;
+	private int idDeTai;
 	
 	public ThanhVien() {
 		super();
 	}
-	
-	public ThanhVien(String idThanhVien, String tenThanhVien, String donVi,
-			String noiDungNghienCuu, String idDeTai) {
+
+	public ThanhVien(int idThanhVien, String tenThanhVien, String donVi,
+			String noiDungNghienCuu, int idDeTai) {
 		super();
 		this.idThanhVien = idThanhVien;
 		this.tenThanhVien = tenThanhVien;
@@ -21,36 +21,47 @@ public class ThanhVien {
 		this.noiDungNghienCuu = noiDungNghienCuu;
 		this.idDeTai = idDeTai;
 	}
-	public String getIdThanhVien() {
+
+	public int getIdThanhVien() {
 		return idThanhVien;
 	}
-	public void setIdThanhVien(String idThanhVien) {
+
+	public void setIdThanhVien(int idThanhVien) {
 		this.idThanhVien = idThanhVien;
 	}
+
 	public String getTenThanhVien() {
 		return tenThanhVien;
 	}
+
 	public void setTenThanhVien(String tenThanhVien) {
 		this.tenThanhVien = tenThanhVien;
 	}
+
 	public String getDonVi() {
 		return donVi;
 	}
+
 	public void setDonVi(String donVi) {
 		this.donVi = donVi;
 	}
+
 	public String getNoiDungNghienCuu() {
 		return noiDungNghienCuu;
 	}
+
 	public void setNoiDungNghienCuu(String noiDungNghienCuu) {
 		this.noiDungNghienCuu = noiDungNghienCuu;
 	}
-	public String getIdDeTai() {
+
+	public int getIdDeTai() {
 		return idDeTai;
 	}
-	public void setIdDeTai(String idDeTai) {
+
+	public void setIdDeTai(int idDeTai) {
 		this.idDeTai = idDeTai;
 	}
+
 	@Override
 	public String toString() {
 		return "ThanhVien [idThanhVien=" + idThanhVien + ", tenThanhVien="
@@ -61,6 +72,4 @@ public class ThanhVien {
 	
 	
 	
-	
-
 }

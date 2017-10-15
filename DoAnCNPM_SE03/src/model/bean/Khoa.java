@@ -2,24 +2,26 @@ package model.bean;
 
 public class Khoa {
 
-	private String idKhoa;
+	private int idKhoa;
 	private String tenKhoa;
 	
 	public Khoa() {
 		super();
 	}
 
-	public Khoa(String idKhoa, String tenKhoa) {
+	public Khoa(int idKhoa, String tenKhoa) {
 		super();
 		this.idKhoa = idKhoa;
 		this.tenKhoa = tenKhoa;
 	}
+	
+	
 
-	public String getIdKhoa() {
+	public int getIdKhoa() {
 		return idKhoa;
 	}
 
-	public void setIdKhoa(String idKhoa) {
+	public void setIdKhoa(int idKhoa) {
 		this.idKhoa = idKhoa;
 	}
 
@@ -35,8 +37,5 @@ public class Khoa {
 	public String toString() {
 		return "Khoa [idKhoa=" + idKhoa + ", tenKhoa=" + tenKhoa + "]";
 	}
-	
-	
-	
-	
+
 }
