@@ -40,7 +40,7 @@ public class AdminEditUserController extends HttpServlet {
 	    response.setCharacterEncoding("UTF-8");
 	    response.setContentType("text/html");
 	    
-	    UserDAO objDAO = new UserDAO();
+	    /*UserDAO objDAO = new UserDAO();
 	    
 	    int idUser = Integer.parseInt( request.getParameter("uid") ) ;
 		String username = request.getParameter("username");
@@ -77,7 +77,8 @@ public class AdminEditUserController extends HttpServlet {
 			response.sendRedirect(request.getContextPath() + "/admin/indexUser?msg=0");
 			return; 
 		}
-		
+		*/
+	    
 		
 	}
 

@@ -38,7 +38,7 @@ public class AdminDelUserController extends HttpServlet {
 	    response.setCharacterEncoding("UTF-8");
 	    response.setContentType("text/html");
 	    
-	    HttpSession session = request.getSession();
+	   /* HttpSession session = request.getSession();
 	    User userinfo =(User)session.getAttribute("sobjUser");
 	    
 	    
@@ -76,7 +76,7 @@ public class AdminDelUserController extends HttpServlet {
 		     }
 			 
 		 }
-	    
+	    */
 		
 		
 		
